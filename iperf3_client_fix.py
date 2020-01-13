@@ -1,5 +1,6 @@
 import os
-   
+
+# iperf requirement
 try:
     import iperf3
 except ImportError:
@@ -10,8 +11,11 @@ except ImportError:
 finally:
     import iperf3
 
+# client initialization
 client = iperf3.Client()
 client.duration = 10
+
+# iperf server ip
 client.server_hostname = '10.153.66.56'
 client.port = 5201
 
